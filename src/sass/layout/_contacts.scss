@@ -1,0 +1,19 @@
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.contacts__list {
+  margin: 20px auto;
+  font-size: 14px;
+  line-height: 2.5;
+}
+
+.contacts__item {
+  color: var(--current-color);
+}
+
+.map {
+  width: 100vw;
+  height: 90vh;
+}
