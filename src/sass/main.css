@@ -153,6 +153,19 @@ nav {
   color: var(--active-color);
 }
 
+.substance__text {
+  color: #fff;
+  line-height: 3;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#7c4326), to(#fff));
+  background: linear-gradient(to right, #7c4326, #fff);
+}
+
+.substance__text::before {
+  content: ">";
+  margin: 0 20px;
+}
+
 .contacts__list {
   margin: 20px auto;
   font-size: 14px;

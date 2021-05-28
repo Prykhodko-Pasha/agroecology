@@ -1,0 +1,13 @@
+.substance__text {
+  color: #fff;
+  line-height: 3;
+  width: 100%;
+  //padding: 10px 10px 10px 20px;
+  //background-color: #7c4326;
+  background: linear-gradient(to right, #7c4326, #fff);
+
+  &::before {
+    content: ">";
+    margin: 0 20px;
+  }
+}
