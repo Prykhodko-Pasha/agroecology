@@ -6,6 +6,10 @@
   --form-button-focus-color: #2e4500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Arimo", sans-serif;
 }
@@ -91,6 +95,7 @@ img {
   height: 60px;
   position: fixed;
   width: 100vw;
+  z-index: 100;
 }
 
 .header .container {
@@ -153,17 +158,82 @@ nav {
   color: var(--active-color);
 }
 
+.accreditation {
+  margin-top: 30px;
+  margin-left: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.accreditation__text {
+  font-weight: 700;
+}
+
+.accreditation__item {
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.substance {
+  padding-top: 60px;
+}
+
 .substance__text {
   color: #fff;
   line-height: 3;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#7c4326), to(#fff));
-  background: linear-gradient(to right, #7c4326, #fff);
+  background: -webkit-gradient(linear, left top, right top, from(#466900), to(#fff));
+  background: linear-gradient(to right, #466900, #fff);
 }
 
 .substance__text::before {
-  content: ">";
+  content: "❯";
+  color: #fff;
   margin: 0 20px;
+}
+
+.substance__list {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.substance__item {
+  position: relative;
+}
+
+.substance__item:hover, .substance__item:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#fff), to(#a1c323));
+  background: linear-gradient(to right, #fff, #a1c323);
+}
+
+.substance__item p {
+  max-width: 400px;
+}
+
+.substance__sub-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 320px;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 3px #a1c323;
+          box-shadow: 0px 0px 10px 3px #a1c323;
+  border-radius: 5px;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.substance__item:hover .substance__sub-item,
+.substance__item:focus .substance__sub-item {
+  visibility: visible;
+  opacity: 1;
 }
 
 .contacts__list {
@@ -184,7 +254,7 @@ nav {
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #7c4326;
+  background-color: #2e4500;
   color: #fff;
 }
 

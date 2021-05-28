@@ -4,6 +4,7 @@
   height: 60px;
   position: fixed;
   width: 100vw;
+  z-index: 100;
 
   & .container {
     display: flex;
