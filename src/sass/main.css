@@ -184,6 +184,7 @@ nav {
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#466900), to(#fff));
   background: linear-gradient(to right, #466900, #fff);
+  border-radius: 5px;
 }
 
 .substance__text::before {
@@ -206,6 +207,7 @@ nav {
 .substance__item:hover, .substance__item:focus {
   background: -webkit-gradient(linear, left top, right top, from(#fff), to(#a1c323));
   background: linear-gradient(to right, #fff, #a1c323);
+  border-radius: 5px;
 }
 
 .substance__item p {

@@ -24,6 +24,7 @@
   width: 100%;
 
   background: linear-gradient(to right, #466900, #fff);
+  border-radius: 5px;
 
   &::before {
     content: "❯";
@@ -46,6 +47,7 @@
   &:hover,
   &:focus {
     background: linear-gradient(to right, #fff, #a1c323);
+    border-radius: 5px;
   }
 
   & p {
