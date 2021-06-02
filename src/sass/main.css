@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Arimo", sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -156,6 +157,11 @@ nav {
 
 .menu__item--active {
   color: var(--active-color);
+}
+
+.what-we-have__item::before {
+  content: "\2713";
+  margin-right: 5px;
 }
 
 .accreditation {
