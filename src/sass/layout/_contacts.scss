@@ -1,11 +1,56 @@
+.contacts__wrapper {
+  display: flex;
+}
+
 .contacts__list {
   margin: 20px auto;
-  font-size: 14px;
+  // font-size: 14px;
   line-height: 2.5;
 }
 
 .contacts__item {
-  color: var(--current-color);
+  color: var(--dark-green-color);
+}
+
+.team {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.team__item {
+  display: flex;
+  box-shadow: 0px 0px 5px 1px var(--light-green-color);
+  border-radius: 5px;
+  margin-bottom: 40px;
+
+  transition: box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px 3px var(--light-green-color);
+  }
+
+  & img {
+    border-radius: 5px;
+  }
+}
+
+.team__text {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.team__place {
+  color: var(--medium-green-color);
+  font-weight: 700;
+}
+
+.team__name {
+  font-weight: 700;
 }
 
 .map {

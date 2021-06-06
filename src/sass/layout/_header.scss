@@ -32,23 +32,23 @@ nav {
   padding-bottom: 22px;
   position: relative;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation);
 
   &:hover,
   &:focus {
-    color: var(--active-color);
+    color: var(--light-green-color);
   }
 
   &::after {
     content: "";
     width: 0;
     height: 2px;
-    background-color: var(--active-color);
+    background-color: var(--light-green-color);
     position: absolute;
     bottom: 20px;
     left: 0;
 
-    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width var(--animation);
   }
 
   &:hover::after,
@@ -58,5 +58,5 @@ nav {
 }
 
 .menu__item--active {
-  color: var(--active-color);
+  color: var(--light-green-color);
 }
