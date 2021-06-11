@@ -283,6 +283,21 @@ nav {
   opacity: 1;
 }
 
+.accreditation-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.accreditation-logo img {
+  width: 15%;
+  margin-left: 10px;
+}
+
 .contacts__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

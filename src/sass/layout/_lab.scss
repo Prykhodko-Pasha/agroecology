@@ -44,6 +44,8 @@
 .substance__item {
   position: relative;
 
+  // transition: all var(--animation);
+
   &:hover,
   &:focus {
     background: linear-gradient(to right, #fff, #a1c323);
@@ -75,5 +77,16 @@
   .substance__item:focus & {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.accreditation-logo {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+
+  & img {
+    width: 15%;
+    margin-left: 10px;
   }
 }
