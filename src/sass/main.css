@@ -94,27 +94,36 @@ img {
   -webkit-box-shadow: 0px -20px 34px 9px #2e4500;
           box-shadow: 0px -20px 34px 9px #2e4500;
   height: 250px;
+  position: fixed;
   width: 100%;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-transition: height var(--animation);
+  transition: height var(--animation);
 }
 
 .header-bg-index {
   background-image: url("../images/Depositphotos_365887680_xl-2015.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 .header-bg-lab {
   background-image: url("../images/test-2.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+}
+
+.header-bg-contacts {
+  background-image: url("../images/test-4.jpg");
+}
+
+.header-is-scrolled {
+  height: 100px;
 }
 
 .logo {
@@ -124,13 +133,22 @@ img {
   height: 100%;
   width: 250px;
   padding-top: 20px;
-  margin-left: 20px;
+  margin-right: calc(50% - 125px);
+  margin-left: auto;
+  -webkit-transition: all var(--animation);
+  transition: all var(--animation);
+}
+
+.logo-is-scrolled {
+  width: 100px;
+  padding-top: 10px;
+  margin-right: calc(50% - 50px);
 }
 
 nav {
-  width: 24vw;
+  width: 330px;
   height: 100%;
-  margin-left: 3vw;
+  margin-left: 40px;
 }
 
 .menu {
@@ -144,11 +162,22 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   height: 100%;
+  -webkit-transition: all var(--animation);
+  transition: all var(--animation);
+}
+
+.menu-is-scrolled {
+  font-size: 14px;
+}
+
+.menu-is-scrolled .menu__item {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .menu__item {
@@ -164,20 +193,16 @@ nav {
   color: var(--light-green-color);
 }
 
-.menu__item::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--light-green-color);
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  -webkit-transition: width var(--animation);
-  transition: width var(--animation);
+.menu__item::before {
+  content: "►";
+  color: currentColor;
+  margin: 0 10px 0 0;
+  -webkit-transition: margin var(--animation);
+  transition: margin var(--animation);
 }
 
-.menu__item:hover::after, .menu__item:focus::after {
-  width: 100%;
+.menu__item:hover::before, .menu__item:focus::before {
+  margin: 0 5px 0 5px;
 }
 
 .menu__item--active {
