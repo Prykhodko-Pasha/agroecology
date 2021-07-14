@@ -9,7 +9,7 @@ let scrollPrev = 0;
 const animateHeader = () => {
   let scrolled = window.scrollY;
 
-  console.log(scrolled);
+  //   console.log(scrolled);
 
   if (scrolled > 50 && scrolled > scrollPrev) {
     refs.header.classList.add("header-is-scrolled");
@@ -17,7 +17,7 @@ const animateHeader = () => {
     refs.header.classList.remove("header-is-scrolled");
   }
   scrollPrev = scrolled;
-  console.log(scrollPrev);
+  //   console.log(scrollPrev);
 };
 
 window.addEventListener("scroll", animateHeader);
