@@ -1,26 +1,23 @@
 const refs = {
-    header: document.querySelector(".header"),
-    logo: document.querySelector(".logo"),
-    menu: document.querySelector(".menu"),
+  header: document.querySelector(".header"),
+  logo: document.querySelector(".logo"),
+  menu: document.querySelector(".menu"),
 };
 // console.dir(refs.header);
-
-
+let scrollPrev = 0;
 
 const animateHeader = () => {
-    let top = window.scrollY;
-    // console.log(top);
-    
-    if(top > 1) {
-    refs.header.classList.add('header-is-scrolled');
-    refs.logo.classList.add('logo-is-scrolled');
-        refs.menu.classList.add('menu-is-scrolled');
-    }
-    else {
-        refs.header.classList.remove('header-is-scrolled');
-        refs.logo.classList.remove('logo-is-scrolled');
-        refs.menu.classList.remove('menu-is-scrolled');
-    }
-}
+  let scrolled = window.scrollY;
+
+  console.log(scrolled);
+
+  if (scrolled > 50 && scrolled > scrollPrev) {
+    refs.header.classList.add("header-is-scrolled");
+  } else {
+    refs.header.classList.remove("header-is-scrolled");
+  }
+  scrollPrev = scrolled;
+  console.log(scrollPrev);
+};
 
 window.addEventListener("scroll", animateHeader);

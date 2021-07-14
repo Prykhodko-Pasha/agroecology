@@ -1,50 +1,76 @@
 .header {
-  background-color: rgba(255, 255, 255, .97);
+  background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0px -20px 34px 9px #2e4500;
-  height: 250px;
+  height: 150px;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 3;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 
-  transition: height var(--animation);
+  transform: translateY(0);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &-bg-index {
-    background-image: url('../images/Depositphotos_365887680_xl-2015.jpg');
-      }
+    background-image: url("../images/Depositphotos_365887680_xl-2015.jpg");
+  }
 
   &-bg-lab {
-    background-image: url('../images/test-2.jpg');
-      }
+    background-image: url("../images/test-2.jpg");
+  }
 
   &-bg-contacts {
-    background-image: url('../images/test-4.jpg');
-      }
+    background-image: url("../images/test-4.jpg");
+  }
 
   &-is-scrolled {
-    height: 100px;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    // transform: translateY(-15px);
+    transform: scale(1.2);
+  }
+  60% {
+    // transform: translateY(-5px);
+    transform: scale(1.1);
   }
 }
 
 .logo {
   display: flex;
   height: 100%;
-  width: 250px;
-  padding-top: 20px;
-  margin-right: calc(50% - 125px);
+  width: 150px;
+  padding-top: 10px;
+  margin-right: calc(50% - 75px);
   margin-left: auto;
 
-  transition: all var(--animation);
+  transform: scale(1);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &-is-scrolled {
     width: 100px;
     padding-top: 10px;
     margin-right: calc(50% - 50px);
+  }
+
+  &:hover,
+  &:focus {
+    animation: bounce 1s;
   }
 }
 
@@ -58,7 +84,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -70,21 +96,19 @@ nav {
     font-size: 14px;
 
     & .menu__item {
-    padding-top: 5px;
-    padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
   }
 }
 
 .menu__item {
   color: var(--main-color);
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: relative;
 
   transition: color var(--animation);
-
-  
 
   &:hover,
   &:focus {
@@ -109,15 +133,23 @@ nav {
   // }
 
   &::before {
-    content: "►";
-    color: currentColor;
+    content: url(./../images/arrow-right.svg);
+    // background-image: url("data:image/svg+xml,%3Csvg width='11px' height='14px' viewBox='0 0 11 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Eplay_arrow%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Rounded' transform='translate(-753.000000, -955.000000)'%3E%3Cg id='AV' transform='translate(100.000000, 852.000000)'%3E%3Cg id='-Round-/-AV-/-play_arrow' transform='translate(646.000000, 98.000000)'%3E%3Cg%3E%3Crect id='Rectangle-Copy-50' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Cpath d='M7,6.82 L7,17.18 C7,17.97 7.87,18.45 8.54,18.02 L16.68,12.84 C17.3,12.45 17.3,11.55 16.68,11.15 L8.54,5.98 C7.87,5.55 7,6.03 7,6.82 Z' id='🔹Icon-Color' fill='%231D1D1D'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    // fill: #1d1d1d;
+    // width: 10px;
+    // height: 100%;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: right;
+    // color: currentColor;
     margin: 0 10px 0 0;
-    transition: margin var(--animation);
+    transition: all var(--animation);
   }
 
   &:hover::before,
   &:focus::before {
     margin: 0 5px 0 5px;
+    content: url(./../images/arrow-right-2.svg);
   }
 }
 
