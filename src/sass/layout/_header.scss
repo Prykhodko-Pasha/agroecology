@@ -40,13 +40,13 @@
 }
 
 //======================= MENU =======================
-nav,
-.menu {
+nav {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   nav {
+    display: block;
     width: 330px;
     height: 100%;
     margin-left: 40px;
