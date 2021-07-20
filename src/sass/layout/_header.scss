@@ -241,3 +241,98 @@ nav {
     display: none;
   }
 }
+
+//==== Mob Menu ====
+.mob-menu {
+  font-size: 26px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  // font-weight: 500;
+  // line-height: 1.18;
+  // letter-spacing: 0.02em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: fixed;
+  top: 69px;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 0;
+  padding: 0 40px;
+  background-color: #fff;
+  // transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all var(--animation);
+}
+
+.mob-menu.is-open {
+  // transform: translateY(0);
+  opacity: 1;
+  height: calc(100% - 69px);
+  pointer-events: initial;
+}
+
+// .mob-menu__close-btn {
+//   position: absolute;
+//   top: 10px;
+//   right: 15px;
+//   background: transparent;
+//   cursor: pointer;
+//   border: none;
+//   fill: currentColor;
+//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:hover,
+//   &:focus {
+//     fill: var(--active-color);
+//   }
+// }
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+// .mob-menu__link {
+//   font-size: 40px;
+//   // color: var(--main-color);
+
+//   transition: color var(--animation);
+
+//   // &:hover,
+//   // &:focus {
+//   //   color: var(--light-green-color);
+//   // }
+// }
+
+.mob-menu__link--active {
+  color: var(--light-green-color);
+}
+
+// .mob-menu__contacts {
+//   margin-top: auto;
+
+//   li:not(:last-child) {
+//     margin-bottom: 32px;
+//   }
+// }
+
+.mob-menu__tel {
+  font-size: 30px;
+  color: var(--medium-green-color);
+  margin-bottom: 32px;
+}
+
+.mob-menu__mail {
+  font-size: 30px;
+  color: var(--medium-green-color);
+  text-transform: none;
+  // &:hover,
+  // &:focus {
+  //   color: var(--active-color);
+  // }
+}

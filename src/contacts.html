@@ -21,29 +21,59 @@
   </head>
   <body>
     <header class="header header-bg-contacts">
-      <!-- <div class="container"> -->
-        
-        <nav>
-          <ul class="menu">
-            <li>
-              <a class="menu__item" href="../index.html">Головна</a>
-            </li>
-            <li>
-              <a class="menu__item" href="./lab.html"
-                >Випробувальна лабораторія</a
-              >
-            </li>
-            <li>
-              <a class="menu__item menu__item--active" href="./contacts.html"
-                >Контакти</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <a class="logo" href="../index.html">
-          <img src="./images/logo-9-2.jpg" alt="Відділ агроекології і біобезпеки" />
-        </a>
-      <!-- </div> -->
+      <button class="burger" type="button">
+        <div class="burger__icon"></div>
+      </button>
+      <div class="mob-menu">
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="../index.html">Головна</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="./lab.html"
+              >Випробувальна лабораторія</a
+            >
+          </li>
+          <li class="mob-menu__item">
+            <a
+              class="mob-menu__link mob-menu__link--active"
+              href="./contacts.html"
+              >Контакти</a
+            >
+          </li>
+        </ul>
+        <ul class="mob-menu__contacts">
+          <li class="mob-menu__tel">
+            <a href="tel:+380961111111"> +38 096 111 11 11 </a>
+          </li>
+          <li class="mob-menu__mail">
+            <a href="mailto:info@devstudio.com"> info@devstudio.com </a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a class="menu__item" href="./index.html">Головна</a>
+          </li>
+          <li>
+            <a class="menu__item" href="./src/lab.html"
+              >Випробувальна лабораторія</a
+            >
+          </li>
+          <li>
+            <a class="menu__item menu__item--active" href="./src/contacts.html"
+              >Контакти</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a class="logo" href="../index.html">
+        <img
+          src="./images/logo-9-2.jpg"
+          alt="Відділ агроекології і біобезпеки"
+        />
+      </a>
     </header>
 
     <main>
@@ -270,5 +300,6 @@
     </footer>
 
     <script src="./js/header-animation.js"></script>
+    <script src="./js/mob-menu.js" type="module"></script>
   </body>
 </html>

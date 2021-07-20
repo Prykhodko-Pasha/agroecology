@@ -21,20 +21,44 @@
   </head>
   <body>
     <header class="header header-bg-lab">
-      <!-- <div class="container"> -->
-
+      <button class="burger" type="button">
+        <div class="burger__icon"></div>
+      </button>
+      <div class="mob-menu">
+        <ul class="mob-menu__list">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="../index.html">Головна</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link mob-menu__link--active" href="./lab.html"
+              >Випробувальна лабораторія</a
+            >
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="./contacts.html">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mob-menu__contacts">
+          <li class="mob-menu__tel">
+            <a href="tel:+380961111111"> +38 096 111 11 11 </a>
+          </li>
+          <li class="mob-menu__mail">
+            <a href="mailto:info@devstudio.com"> info@devstudio.com </a>
+          </li>
+        </ul>
+      </div>
       <nav>
         <ul class="menu">
           <li>
-            <a class="menu__item" href="../index.html">Головна</a>
+            <a class="menu__item" href="./index.html">Головна</a>
           </li>
           <li>
-            <a class="menu__item menu__item--active" href="./lab.html"
+            <a class="menu__item menu__item--active" href="./src/lab.html"
               >Випробувальна лабораторія</a
             >
           </li>
           <li>
-            <a class="menu__item" href="./contacts.html">Контакти</a>
+            <a class="menu__item" href="./src/contacts.html">Контакти</a>
           </li>
         </ul>
       </nav>
@@ -44,7 +68,6 @@
           alt="Відділ агроекології і біобезпеки"
         />
       </a>
-      <!-- </div> -->
     </header>
 
     <main>
@@ -52,7 +75,7 @@
         <div class="container">
           <h1 class="section__title">Випробувальна лабораторія</h1>
           <ol class="accreditation">
-            <p class="accreditation__text">Сфери акредитації:</p>
+            <p class="accreditation__text">Сфера акредитації:</p>
             <li class="accreditation__item"><a href="#1">Ґрунт</a></li>
             <li class="accreditation__item"><a href="#2">Біопрепарати</a></li>
             <li class="accreditation__item">
@@ -952,5 +975,6 @@
 
     <script src="./js/header-animation.js" type="module"></script>
     <script src="./js/gallery.js" type="module"></script>
+    <script src="./js/mob-menu.js" type="module"></script>
   </body>
 </html>

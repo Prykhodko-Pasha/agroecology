@@ -357,6 +357,60 @@ nav {
   }
 }
 
+.mob-menu {
+  font-size: 26px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  top: 69px;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 0;
+  padding: 0 40px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all var(--animation);
+  transition: all var(--animation);
+}
+
+.mob-menu.is-open {
+  opacity: 1;
+  height: calc(100% - 69px);
+  pointer-events: initial;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link--active {
+  color: var(--light-green-color);
+}
+
+.mob-menu__tel {
+  font-size: 30px;
+  color: var(--medium-green-color);
+  margin-bottom: 32px;
+}
+
+.mob-menu__mail {
+  font-size: 30px;
+  color: var(--medium-green-color);
+  text-transform: none;
+}
+
 .what-we-have__item::before {
   content: "\2713";
   margin-right: 5px;
@@ -533,12 +587,6 @@ nav {
 }
 
 .gallery__link {
-  display: block;
-  text-decoration: none;
-  height: 100%;
-}
-
-.gallery__link:hover {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
