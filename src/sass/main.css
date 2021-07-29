@@ -522,7 +522,7 @@ nav {
 }
 
 .substance__item::after {
-  content: "\1F893";
+  content: "🢓";
   font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
