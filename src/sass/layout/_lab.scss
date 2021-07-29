@@ -63,15 +63,15 @@
   }
 
   &::after {
-    content: "🢓";
-    font-size: 40px;
+    content: url(../images/arrow-down.svg);
+    // font-size: 40px;
     display: flex;
-    width: 32px;
-    height: 32px;
+    // width: 32px;
+    // height: 32px;
     cursor: pointer;
-
-    padding-left: 10px;
-    padding-right: 40px;
+    padding-left: 12px;
+    padding-right: 30px;
+    align-items: center;
     // transform: rotate(90deg);
     transition: all var(--animation);
   }
@@ -114,7 +114,7 @@
 }
 
 .substance__item.is-open::after {
-  transform: rotate(-180deg) translateX(6px);
+  transform: rotateX(180deg);
 }
 
 .substance__sub-item {

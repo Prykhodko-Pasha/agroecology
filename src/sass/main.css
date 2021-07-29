@@ -522,16 +522,16 @@ nav {
 }
 
 .substance__item::after {
-  content: "🢓";
-  font-size: 40px;
+  content: url(../images/arrow-down.svg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 32px;
-  height: 32px;
   cursor: pointer;
-  padding-left: 10px;
-  padding-right: 40px;
+  padding-left: 12px;
+  padding-right: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all var(--animation);
   transition: all var(--animation);
 }
@@ -571,8 +571,8 @@ nav {
 }
 
 .substance__item.is-open::after {
-  -webkit-transform: rotate(-180deg) translateX(6px);
-          transform: rotate(-180deg) translateX(6px);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .substance__sub-item {
