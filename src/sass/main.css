@@ -543,9 +543,7 @@ nav {
 
 .substance__item__desc {
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: absolute;
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
@@ -565,6 +563,9 @@ nav {
 
 .substance__item.is-open + .substance__item__desc {
   opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: static;
   -webkit-transform: translateY(0);
           transform: translateY(0);

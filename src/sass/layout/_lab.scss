@@ -85,8 +85,8 @@
 .substance__item__desc {
   // height: 0;
   opacity: 0;
-  // display: none;
-  display: flex;
+  display: none;
+  // display: flex;
   position: absolute;
   transform: translateY(-10%);
   pointer-events: none;
@@ -108,7 +108,7 @@
 .substance__item.is-open + .substance__item__desc {
   // height: 100%;
   opacity: 1;
-  // display: flex;
+  display: flex;
   position: static;
   transform: translateY(0);
 }
