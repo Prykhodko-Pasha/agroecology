@@ -155,7 +155,7 @@ nav {
 
 .logo {
   height: 65px;
-  width: 170px;
+  width: 150px;
   // padding-top: 10px;
   // margin-right: 10px;
   // margin-left: auto;
@@ -180,7 +180,7 @@ nav {
 
   .mob-menu.is-open + & {
     // position: fixed;
-    height: 170px;
+    height: 150px;
   }
 
   .mob-menu.is-open + &::after {
@@ -322,7 +322,7 @@ nav {
 .mob-menu.is-open {
   // transform: translateY(0);
   opacity: 1;
-  height: calc(100% - 69px);
+  height: calc(100vh - 69px);
   pointer-events: initial;
 }
 

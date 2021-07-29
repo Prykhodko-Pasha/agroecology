@@ -277,7 +277,7 @@ nav {
 
 .logo {
   height: 65px;
-  width: 170px;
+  width: 150px;
   position: fixed;
   top: 5px;
   right: 0;
@@ -300,7 +300,7 @@ nav {
 }
 
 .mob-menu.is-open + .logo {
-  height: 170px;
+  height: 150px;
 }
 
 .mob-menu.is-open + .logo::after {
@@ -442,7 +442,7 @@ nav {
 
 .mob-menu.is-open {
   opacity: 1;
-  height: calc(100% - 69px);
+  height: calc(100vh - 69px);
   pointer-events: initial;
 }
 
@@ -552,7 +552,14 @@ nav {
   margin-top: 20px;
   margin-left: 20px;
   font-size: 18px;
+  font-size: 12px;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .substance__list {
+    font-size: 18px;
+  }
 }
 
 .substance__item {
@@ -581,6 +588,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 12px;
+  height: 12px;
   cursor: pointer;
   padding-left: 12px;
   padding-right: 30px;

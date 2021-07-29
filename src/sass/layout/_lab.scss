@@ -37,8 +37,15 @@
   margin-top: 20px;
   margin-left: 20px;
   font-size: 18px;
+  font-size: 12px;
   line-height: 1.5;
   //   display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  .substance__list {
+    font-size: 18px;
+  }
 }
 
 .substance__item {
@@ -66,8 +73,8 @@
     content: url(../images/arrow-down.svg);
     // font-size: 40px;
     display: flex;
-    // width: 32px;
-    // height: 32px;
+    width: 12px;
+    height: 12px;
     cursor: pointer;
     padding-left: 12px;
     padding-right: 30px;
