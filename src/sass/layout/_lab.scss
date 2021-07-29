@@ -84,18 +84,18 @@
 
 .substance__item__desc {
   // height: 0;
-  opacity: 0;
+  // opacity: 0;
   display: none;
   // display: flex;
-  position: absolute;
-  transform: translateY(-10%);
-  pointer-events: none;
+  // position: absolute;
+  // transform: translateY(-100%);
+  // pointer-events: none;
   padding: 5px 0 5px 0;
   background: linear-gradient(to left, #fff, rgba(161, 195, 35, 0.3));
   border-radius: 0 0 5px 5px;
   // margin-bottom: 4px;
 
-  transition: all var(--animation);
+  // transition: all var(--animation);
 
   & p {
     // display: flex;
@@ -107,10 +107,10 @@
 // ======== animation ===========
 .substance__item.is-open + .substance__item__desc {
   // height: 100%;
-  opacity: 1;
+  // opacity: 1;
   display: flex;
-  position: static;
-  transform: translateY(0);
+  // position: static;
+  // transform: translateY(0);
 }
 
 .substance__item.is-open::after {

@@ -270,6 +270,12 @@ nav {
   transition: all var(--animation);
 }
 
+// body:has(.is-open) {
+//   overflow: hidden;
+//   position: fixed;
+//   height: 100%;
+// }
+
 .mob-menu.is-open {
   // transform: translateY(0);
   opacity: 1;

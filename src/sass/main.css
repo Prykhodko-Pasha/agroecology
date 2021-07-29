@@ -542,18 +542,11 @@ nav {
 }
 
 .substance__item__desc {
-  opacity: 0;
   display: none;
-  position: absolute;
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
-  pointer-events: none;
   padding: 5px 0 5px 0;
   background: -webkit-gradient(linear, right top, left top, from(#fff), to(rgba(161, 195, 35, 0.3)));
   background: linear-gradient(to left, #fff, rgba(161, 195, 35, 0.3));
   border-radius: 0 0 5px 5px;
-  -webkit-transition: all var(--animation);
-  transition: all var(--animation);
 }
 
 .substance__item__desc p {
@@ -562,13 +555,9 @@ nav {
 }
 
 .substance__item.is-open + .substance__item__desc {
-  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: static;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .substance__item.is-open::after {
