@@ -251,12 +251,66 @@ nav {
   }
 }
 
+@-webkit-keyframes blick {
+  0% {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  20%,
+  100% {
+    -webkit-transform: translateX(16em) skewX(-45deg);
+            transform: translateX(16em) skewX(-45deg);
+  }
+}
+
+@keyframes blick {
+  0% {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  20%,
+  100% {
+    -webkit-transform: translateX(16em) skewX(-45deg);
+            transform: translateX(16em) skewX(-45deg);
+  }
+}
+
 .logo {
+  height: 65px;
+  width: 170px;
+  position: fixed;
+  top: 5px;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  -webkit-transition: all var(--animation);
+  transition: all var(--animation);
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 1.5em;
   height: 100%;
-  width: 60px;
-  padding-top: 10px;
-  margin-right: 10px;
-  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+          transform: translateX(-4em) skewX(-45deg);
+  -webkit-animation: blick 5s infinite;
+          animation: blick 5s infinite;
+}
+
+.mob-menu.is-open + .logo {
+  height: 170px;
+}
+
+.mob-menu.is-open + .logo::after {
+  content: -webkit-gradient(linear, left bottom, left top, from(white), to(transparent));
+  content: linear-gradient(to top, white, transparent);
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: -43%;
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -265,6 +319,7 @@ nav {
     display: -ms-flexbox;
     display: flex;
     width: 150px;
+    height: 100%;
     margin-right: calc(50% - 75px);
     -webkit-transform: scale(1);
             transform: scale(1);
