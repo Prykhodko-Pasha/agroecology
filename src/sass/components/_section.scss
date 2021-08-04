@@ -12,6 +12,15 @@
   color: var(--light-green-color);
 }
 
+.section__subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--light-green-color);
+}
+
 @media screen and (min-width: 768px) {
   .section {
     padding-top: 200px;

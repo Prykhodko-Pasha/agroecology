@@ -1,4 +1,14 @@
-.what-we-have__item::before {
+.what-we-have__item {
+  display: flex;
+  align-items: center;
+
+  & p {
+    margin-left: 30px;
+    width: 50%;
+  }
+}
+
+.what-we-have__item p::before {
   content: "\2713";
   margin-right: 5px;
 }
