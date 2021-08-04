@@ -12,9 +12,13 @@
   }
 }
 
+.atestat__content {
+  display: flex;
+  align-items: center;
+}
 .atestat {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 40px;
   box-shadow: 0px 0px 5px 1px var(--light-green-color);
   border-radius: 5px;
   cursor: zoom-in;

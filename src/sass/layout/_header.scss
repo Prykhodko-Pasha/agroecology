@@ -1,5 +1,5 @@
 .header {
-  height: 70px;
+  height: 60px;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0px -20px 34px 9px #2e4500;
   position: fixed;
@@ -154,13 +154,13 @@ nav {
 }
 
 .logo {
-  height: 65px;
+  height: 58px;
   width: 150px;
   // padding-top: 10px;
   // margin-right: 10px;
   // margin-left: auto;
   position: fixed;
-  top: 5px;
+  top: 2px;
   right: 0;
   z-index: 2;
   overflow: hidden;
@@ -225,7 +225,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-right: auto;
-  margin-left: 15px;
+  margin-left: 5px;
   // padding: 10px 15px 10px 15px;
   border: none;
   background-color: transparent;
@@ -296,10 +296,10 @@ nav {
   // letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-around;
 
   position: fixed;
-  top: 69px;
+  top: 59px;
   left: 0;
   z-index: 2;
   width: 100vw;
@@ -322,7 +322,7 @@ nav {
 .mob-menu.is-open {
   // transform: translateY(0);
   opacity: 1;
-  height: calc(100vh - 69px);
+  height: calc(100vh - 59px);
   pointer-events: initial;
 }
 
@@ -342,8 +342,12 @@ nav {
 //   }
 // }
 
+.mob-menu__list {
+  margin-top: 120px;
+}
+
 .mob-menu__item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 // .mob-menu__link {
