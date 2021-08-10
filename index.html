@@ -23,20 +23,22 @@
   <body>
     <header class="header header-bg-index">
       <button class="burger" type="button">
-        <div class="burger__icon">
-        </div>
+        <div class="burger__icon"></div>
       </button>
       <div class="mob-menu">
         <ul class="mob-menu__list">
           <li class="mob-menu__item">
-              <a class="mob-menu__link mob-menu__link--active" href="./src/index.html">Головна</a>
+            <a class="mob-menu__link mob-menu__link--active" href="./index.html"
+              >Головна</a
+            >
           </li>
           <li class="mob-menu__item">
-              <a class="mob-menu__link" href="./src/lab.html"
-          >Випробувальна лабораторія</a>
+            <a class="mob-menu__link" href="./src/lab.html"
+              >Випробувальна лабораторія</a
+            >
           </li>
           <li class="mob-menu__item">
-              <a class="mob-menu__link" href="./src/contacts.html">Контакти</a>
+            <a class="mob-menu__link" href="./src/contacts.html">Контакти</a>
           </li>
         </ul>
         <!-- <ul class="mob-menu__contacts">
@@ -53,7 +55,10 @@
         </ul> -->
       </div>
       <a class="logo" href="./index.html">
-        <img src="./src/images/logo-9-2.jpg" alt="Відділ агроекології і біобезпеки" />
+        <img
+          src="./src/images/logo-9-2.jpg"
+          alt="Відділ агроекології і біобезпеки"
+        />
       </a>
       <nav>
         <ul class="menu">
@@ -72,44 +77,41 @@
           </li>
         </ul>
       </nav>
-      
     </header>
 
     <main>
       <section class="section">
         <div class="container">
           <h1 class="section__title">Головна</h1>
-          <br>
-          <br>
+          <br />
+          <br />
           <p class="about__text">
-            <b>Випробувальна лабораторія "Відділ агроекології і біобезпеки"</b>
-            організована на базі Відділу агроекології і біобезпеки Інституту
-            агроекології і природокористування НААН, в 2018 році.<br />
+            <b>Випробувальна лабораторія "Відділ агроекології і біобезпеки"</b> Інституту агроекології і природокористування НААН – це провідна сучасна лабораторія, яка спрямована на визначення якості та безпечності сільськогосподарської продукції.
+            <br />
             Співробітники ВЛ "ВАБ" займаються науково-практичними розробками в
             галузях екології, мікробіології, вірусології, біотехнології,
             агрономії.
           </p>
           <br />
           <div class="atestat__content">
-
             <p class="about__text">
               Випробувальну лабораторію Відділу агроекології і біобезпеки
               Інституту агроекології і природокористування НААН акредитовано
               Національним агенством з акредитації України
               <b
-              >(№202158 від 15.04.2021) відповідно до вимог ДСТУ EN ISO/IEC
-              17025:2019, IDT)</b
+                >(№202158 від 15.04.2021) відповідно до вимог ДСТУ EN ISO/IEC
+                17025:2019, IDT)</b
               >
               у сфері фізико-хімічні, мікробіологічні випробування грунту,
               біопрепаратів, рослинницької продукції; випробування біологічних
               об’єктів та довкілля; відбір проб.
             </p>
-            <br>
+            <br />
             <img
-            class="atestat lightbox__min-image"
-            src="./src/images/atestat.jpg"
-            alt="Атестат про акредитацію"
-            data-source="./src/images/atestat.jpg"
+              class="atestat lightbox__min-image"
+              src="./src/images/atestat.jpg"
+              alt="Атестат про акредитацію"
+              data-source="./src/images/atestat.jpg"
             />
           </div>
           <div class="lightbox">
@@ -124,10 +126,10 @@
               class="lightbox__button"
               data-action="close-lightbox"
             ></button>
-          </div>  
-            <br />
+          </div>
+          <br />
           <p class="about__text">
-            <b>Наказом № 295 від 30.04.2021</b> Міністерство захисту довкілля та
+            <a class="nakaz" href="https://mepr.gov.ua/files/docs/nakazy/2021/295%20%D0%BD.pdf" target="_blank"><b>Наказом № 295 від 30.04.2021</b></a> Міністерство захисту довкілля та
             природних ресурсів України внесено до переліку науково-дослідних
             установ, підприємств та організацій уповноважених на проведення
             державних випробувань пестицидів та агрохімікатів
@@ -143,78 +145,201 @@
           <br />
           <ol class="about__text">
             На сьогодні у ВЛ «ВАБ» існує три напрями випробувань:
-            <li>Мікробіологічні випробування</li>
-            <li>Біологічні та екологічні випробування</li>
-            <li>Фізико-хімічні випробування</li>
+            <li class="about__text__item">Мікробіологічні випробування</li>
+            <li class="about__text__item">
+              Біологічні та екологічні випробування
+            </li>
+            <li class="about__text__item">Фізико-хімічні випробування</li>
           </ol>
           <br />
-          <p class="about__text">
-            <i>Особливості випробувальної лабораторії «Відділ агроекології і біобезпеки»:</i>
-            <ul class="what-we-have__list about__text">
-              <li class="what-we-have__item">
-                <p>
-                  сучасне лабораторне обладнання
-                </p>
-                <ul class="grid-gallery">
-                  <li class="grid-gallery__item vertical">
-                    <img class="grid-gallery__image" src="./src/images/photos/modern_equipment/1.jpg" alt="Сучасне обладнання"/>
-                  </li>
-                  <li class="grid-gallery__item gorizontal1">
-                    <img class="grid-gallery__image" src="./src/images/photos/modern_equipment/2.jpg" alt="Сучасне обладнання"/>
-                  </li>
-                  <li class="grid-gallery__item gorizontal2">
-                    <img class="grid-gallery__image" src="./src/images/photos/modern_equipment/3.jpg" alt="Сучасне обладнання"/>
-                  </li>
-                </ul>
-              </li>
-              <li class="what-we-have__item">
-                <ul class="grid-gallery two-photos">
-                  <li class="grid-gallery__item gorizontal1">
-                    <img class="grid-gallery__image" src="./src/images/photos/aquarium/1.jpg" alt="Акваріум"/>
-                  </li>
-                  <li class="grid-gallery__item gorizontal2">
-                    <img class="grid-gallery__image" src="./src/images/photos/aquarium/2.jpg" alt="Акваріум"/>
-                  </li>
-                </ul>
-                <p>«акваріумна кімната», де вирощують рибок гупі <i>(Poecilia reticulata)</i>, найменші водні ракоподібні дафнії <i>(Daphnia magna)</i>, мікроскопічні одноклітинні зелені водорості хлорела <i>(Chlorella vulgaris)</i></p>
-              </li>
-              <li class="what-we-have__item">
-                <p>«кімната-акваріум», де вирощують гуппі, дафнії, хлорелу</p>
-              </li>
-              <li class="what-we-have__item">
-                <p>дослідні поля в Київській, Одеській, Вінницькій областях</p>
-              </li>
-              <li class="what-we-have__item">
-                <p>теплиця – рослини вирощують впродовж всього року</p>
-              </li>
-            </ul>
-          </p>
-          <br>
-          <p class="about__text">Основними напрями досліджень ВЛ «ВАБ» є:
-            <ul class="about__text">
-              <li><b><i>Комплексні дослідження природних, напівприродних, заповідних,
-фітоценозів та агроландшафтів</i></b> – за показниками фіто- та зоорізноманіття,
-мікробіоценозом, агрохімічними показниками ґрунту, якістю продукції.</li>
-              <li><b><i>Державні випробовування пестицидів та агрохімікатів</i></b> –
-визначення їх біологічної ефективності та екологічна оцінка (оцінка
-екологічної небезпечності) на на нецільові об’єкти водної (риби, дафнії),
-ґрунтової (мікроорганізми, земляні червʼяки) та наземної екосистеми.</li>
-              <li><b><i>Молекулярно-генетичні дослідження</i></b> - визначення видового складу
-мікробіоти, оцінка біорізноманіття та виявлення міжвидових і видових
-взаємозв’язків у екосистемах на філогенетичному рівні.</li>
-              <li><b><i>Створення біопрепаратів</i></b> – технологічні розробки виробництва і
-застосування мікробіологічних препаратів на основі високо конкурентних
-мікроорганізмів із агрономічно-корисними властивостями, що дозволять
-вирішити питання формування сталих агроекосистем з позиції екології та
-підвищити врожайність сільськогосподарських культур і якість одержаної
-продукції.</li>
-              <li><b><i>Консалтингові послуги</i></b> з питань екології, біобезпеки, агрохімії,
-мікробіології та вірусології, у агропромисловому виробництві. Проведення
-виставок, конференцій, круглих столів, семінарів, вебінарів, навчань, лекцій,
-стажувань.</li>
-            </ul>
-          </p>
+          <p class="about__text"></p>
         </div>
+
+        <div class="container">
+          <br />
+          <br />
+          <i class="what-we-have__title"
+          >Особливості випробувальної лабораторії «Відділ агроекології і
+          біобезпеки»:</i
+          >
+          <br />
+          <br />
+        </div>
+        <ul class="what-we-have__list about__text">
+          <li class="what-we-have__item">
+            <div class="container">
+              <p>сучасне лабораторне обладнання</p>
+              <ul class="grid-gallery">
+                <li class="grid-gallery__item vertical">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/modern_equipment/1.jpg"
+                    alt="Сучасне обладнання"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal1">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/modern_equipment/2.jpg"
+                    alt="Сучасне обладнання"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal2">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/modern_equipment/3.jpg"
+                    alt="Сучасне обладнання"
+                  />
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="what-we-have__item">
+            <div class="container">
+              <ul class="grid-gallery two-photos">
+                <li class="grid-gallery__item gorizontal1">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/aquarium/1.jpg"
+                    alt="Акваріум"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal2">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/aquarium/2.jpg"
+                    alt="Акваріум"
+                  />
+                </li>
+              </ul>
+              <p>
+                «акваріумна кімната», де вирощують рибок гупі
+                (<i>Poecilia reticulata</i>), найменші водні ракоподібні дафнії
+                (<i>Daphnia magna</i>), мікроскопічні одноклітинні зелені
+                водорості хлорела (<i>Chlorella vulgaris</i>)
+              </p>
+            </div>
+          </li>
+          <li class="what-we-have__item">
+            <div class="container">
+              <p>власний «міні-віварій», де для потреб досліджень розводять перепелів (</i>Coturnix coturnix japonica</i>) та бджіл (<i>Apis mellifera</i>)</p>
+              <ul class="grid-gallery two-photos--right">
+                <li class="grid-gallery__item gorizontal1">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/vivarium/1.jpg"
+                    alt="Віварій"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal2">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/vivarium/2.jpg"
+                    alt="Віварій"
+                  />
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="what-we-have__item">
+            <div class="container">
+              <ul class="grid-gallery">
+                <li class="grid-gallery__item vertical">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/fields/3.jpg"
+                    alt="Дослідні поля"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal1">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/fields/1.jpg"
+                    alt="Дослідні поля"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal2">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/fields/2.jpg"
+                    alt="Дослідні поля"
+                  />
+                </li>
+              </ul>
+              <p>дослідні поля в Київській, Одеській, Вінницькій областях</p>
+            </div>
+          </li>
+          <li class="what-we-have__item">
+            <div class="container">
+              <p>теплиця – рослини вирощують впродовж всього року</p>
+              <ul class="grid-gallery two-photos--right">
+                <li class="grid-gallery__item gorizontal1">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/greenhouse/1.jpg"
+                    alt="Теплиця"
+                  />
+                </li>
+                <li class="grid-gallery__item gorizontal2">
+                  <img
+                    class="grid-gallery__image"
+                    src="./src/images/photos/greenhouse/2.jpg"
+                    alt="Теплиця"
+                  />
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- </p> -->
+        <br />
+        <div class="container">
+          <br />
+          <br />
+          <i class="what-we-have__title">Основними напрямками досліджень ВЛ «ВАБ» є:</i>
+          <br />
+          <br />
+          <ul class="about__text">
+            <li class="research__item">
+              <b
+                ><i
+                  >Комплексні дослідження природних, напівприродних, заповідних,
+                  фітоценозів та агроландшафтів</i
+                ></b
+              >
+              – за показниками фіто- та зоорізноманіття, мікробіоценозом,
+              агрохімічними показниками ґрунту, якістю продукції.
+            </li>
+            <li class="research__item">
+              <b><i>Державні випробовування пестицидів та агрохімікатів</i></b>
+              – визначення їх біологічної ефективності та екологічна оцінка
+              (оцінка екологічної небезпечності) на на нецільові об’єкти водної
+              (риби, дафнії), ґрунтової (мікроорганізми, земляні червʼяки) та
+              наземної екосистеми.
+            </li>
+            <li class="research__item">
+              <b><i>Молекулярно-генетичні дослідження</i></b> - визначення
+              видового складу мікробіоти, оцінка біорізноманіття та виявлення
+              міжвидових і видових взаємозв’язків у екосистемах на
+              філогенетичному рівні.
+            </li>
+            <li class="research__item">
+              <b><i>Створення біопрепаратів</i></b> – технологічні розробки
+              виробництва і застосування мікробіологічних препаратів на основі
+              високо конкурентних мікроорганізмів із агрономічно-корисними
+              властивостями, що дозволять вирішити питання формування сталих
+              агроекосистем з позиції екології та підвищити врожайність
+              сільськогосподарських культур і якість одержаної продукції.
+            </li>
+            <li class="research__item">
+              <b><i>Консалтингові послуги</i></b> з питань екології, біобезпеки,
+              агрохімії, мікробіології та вірусології, у агропромисловому
+              виробництві. Проведення виставок, конференцій, круглих столів,
+              семінарів, вебінарів, навчань, лекцій, стажувань.
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
       </section>
     </main>
 
@@ -260,7 +385,7 @@
         </address>
       </div>
     </footer>
-    
+
     <script src="./src/js/header-animation.js" type="module"></script>
     <script src="./src/js/atestat.js" type="module"></script>
     <script src="./src/js/mob-menu.js" type="module"></script>
