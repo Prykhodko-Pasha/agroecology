@@ -143,7 +143,7 @@ img {
   z-index: 3;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   opacity: 0;
   pointer-events: none;
@@ -750,18 +750,18 @@ nav {
   margin-left: 30px;
 }
 
-.atestat__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .atestat__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .atestat {
-  width: 90%;
-  margin: 0 40px;
   -webkit-box-shadow: 0px 0px 5px 1px var(--light-green-color);
           box-shadow: 0px 0px 5px 1px var(--light-green-color);
   border-radius: 5px;
@@ -783,6 +783,7 @@ nav {
 @media screen and (min-width: 768px) {
   .atestat {
     width: 60%;
+    margin: 0 40px;
   }
 }
 
