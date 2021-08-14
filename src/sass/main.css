@@ -782,7 +782,7 @@ nav {
 
 @media screen and (min-width: 768px) {
   .atestat {
-    width: 60%;
+    width: 40%;
     margin: 0 40px;
   }
 }
@@ -817,6 +817,7 @@ nav {
   color: #fff;
   line-height: 3;
   width: 100%;
+  text-transform: uppercase;
   background: -webkit-gradient(linear, left top, right top, from(#466900), to(#fff));
   background: linear-gradient(to right, #466900, #fff);
   border-radius: 5px;
@@ -941,6 +942,10 @@ nav {
 
 .contacts__item {
   color: var(--dark-green-color);
+}
+
+.contacts__schedule {
+  margin-left: 20px;
 }
 
 .team {
