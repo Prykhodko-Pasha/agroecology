@@ -46,16 +46,16 @@ function showSlides(n) {
 
 // автопрокрутка и автопауза
 let intervalId = setInterval(plusSlide, 3000);
-console.log(intervalId);
+// console.log(intervalId);
 const sliderEl = document.querySelector(".slider");
 sliderEl.addEventListener("mouseover", pauseAutoSlides);
 sliderEl.addEventListener("mouseout", resumeAutoSlides);
 
 function pauseAutoSlides() {
-  console.log(intervalId);
+  //   console.log(intervalId);
   clearInterval(intervalId);
 }
 function resumeAutoSlides() {
   intervalId = setInterval(plusSlide, 3000);
-  console.log(intervalId);
+  //   console.log(intervalId);
 }
