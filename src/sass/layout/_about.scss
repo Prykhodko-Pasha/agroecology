@@ -43,11 +43,16 @@
 //   margin-right: 5px;
 // }
 .research__item {
-  margin-bottom: 10px;
+  // margin-left: 36px;
+  padding: 20px 0 20px 36px;
 
   &::before {
-    content: url(../images/arrow-right.svg);
-    margin-right: 5px;
+    content: "";
+    background-image: url(../images/lab.svg);
+    background-repeat: no-repeat;
+    padding: 15px 14px;
+    position: absolute;
+    left: 12px;
   }
 }
 
@@ -162,4 +167,23 @@
   background-color: rgb(250, 255, 238);
   // margin-top: 25px;
   padding-top: 50px;
+}
+
+.details {
+  text-align: center;
+  padding: 4px 0 100px;
+  // margin-bottom: 20px;
+}
+.details a {
+  font-size: 18px;
+  padding: 16px 32px;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #4caf50;
+
+  &:hover {
+    background-color: #4caf50;
+    color: white;
+  }
 }

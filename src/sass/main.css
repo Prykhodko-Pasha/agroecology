@@ -326,8 +326,7 @@ img {
   position: relative;
   margin: auto;
   height: 500px;
-  margin-bottom: 15px;
-  margin-top: 20px;
+  margin-bottom: -40px;
 }
 
 /* Картинка мастабируется по отношению к родительскому элементу */
@@ -792,12 +791,16 @@ nav {
 }
 
 .research__item {
-  margin-bottom: 10px;
+  padding: 20px 0 20px 36px;
 }
 
 .research__item::before {
-  content: url(../images/arrow-right.svg);
-  margin-right: 5px;
+  content: "";
+  background-image: url(../images/lab.svg);
+  background-repeat: no-repeat;
+  padding: 15px 14px;
+  position: absolute;
+  left: 12px;
 }
 
 .what-we-have__item {
@@ -914,6 +917,26 @@ nav {
 .about-us {
   background-color: #faffee;
   padding-top: 50px;
+}
+
+.details {
+  text-align: center;
+  padding: 4px 0 100px;
+}
+
+.details a {
+  font-size: 18px;
+  padding: 16px 32px;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #4caf50;
+}
+
+.details a:hover {
+  background-color: #4caf50;
+  color: white;
 }
 
 .accreditation {
