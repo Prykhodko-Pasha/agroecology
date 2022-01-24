@@ -83,22 +83,27 @@
       <section class="section">
         <div class="container">
           <h1 class="section__title">Головна</h1>
-          <br />
-          <br />
-          <p class="about__text">
-            <b>Випробувальна лабораторія "Відділ агроекології і біобезпеки"</b>
-            Інституту агроекології і природокористування НААН – це провідна
-            сучасна лабораторія, яка спрямована на визначення якості та
-            безпечності сільськогосподарської продукції.
-            <br />
-            Співробітники ВЛ "ВАБ" займаються науково-практичними розробками в
-            галузях екології, мікробіології, вірусології, біотехнології,
-            агрономії.
-          </p>
-          <img class="logo__bg" src="./src/images/logo-9-2.jpg" alt="лого ВЛ ВАБ"/>
-          <br />
+          <div class="about__content">
+            <p class="about__text about__text--side">
+              <b>Випробувальна лабораторія "Відділ агроекології і біобезпеки"</b>
+              Інституту агроекології і природокористування НААН – це провідна
+              сучасна лабораторія, яка спрямована на визначення якості та
+              безпечності сільськогосподарської продукції.
+              <br />
+              Співробітники ВЛ "ВАБ" займаються науково-практичними розробками в
+              галузях екології, мікробіології, вірусології, біотехнології,
+              агрономії.
+            </p>
+            <img class="logo__bg" src="./src/images/logo-9-2.jpg" alt="лого ВЛ ВАБ"/>
+          </div>
           <div class="atestat__content">
-            <p class="about__text">
+            <img
+              class="atestat lightbox__min-image"
+              src="./src/images/atestat.jpg"
+              alt="Атестат про акредитацію"
+              data-source="./src/images/atestat.jpg"
+            />
+            <p class="about__text about__text--side">
               Випробувальну лабораторію Відділу агроекології і біобезпеки
               Інституту агроекології і природокористування НААН акредитовано
               Національним агентством з акредитації України
@@ -110,13 +115,6 @@
               біопрепаратів, рослинницької продукції; випробувань біологічних
               об’єктів та довкілля; відбору проб.
             </p>
-            <br />
-            <img
-              class="atestat lightbox__min-image"
-              src="./src/images/atestat.jpg"
-              alt="Атестат про акредитацію"
-              data-source="./src/images/atestat.jpg"
-            />
           </div>
           <div class="lightbox">
             <div class="lightbox__overlay"></div>
@@ -131,12 +129,9 @@
               data-action="close-lightbox"
             ></button>
           </div>
-          <br />
-          <br />
-          <br />
           <p class="about__text">
             <a
-              class="nakaz"
+              class="nakaz__link"
               href="https://mepr.gov.ua/files/docs/nakazy/2021/295%20%D0%BD.pdf"
               target="_blank"
               ><b>Наказом №295 від 30.04.2021</b></a
@@ -154,9 +149,9 @@
           <br />
           <br />
         </div>
-        <div class="container about-us">
-          <h2 class="section__subtitle">Про нас</h2>
-          <br />
+        <div class="about-us">
+        <div class="container">
+          <h2 class="section__title">Про нас</h2>
           <ol class="about__text">
             На сьогодні у ВЛ «ВАБ» існує три напрями випробувань:
             <li class="about__text__item">Мікробіологічні випробування</li>
@@ -166,8 +161,6 @@
             <li class="about__text__item">Фізико-хімічні випробування</li>
           </ol>
           <br />
-          <p class="about__text"></p>
-
           <br />
           <br />
           <i class="what-we-have__title"
@@ -176,6 +169,7 @@
           >
           <br />
           <br />
+        </div>
         </div>
         <ul class="what-we-have__list about__text">
           <li class="what-we-have__item">
@@ -324,7 +318,8 @@
           </li>
         </ul>
         
-        <div class="container about-us">
+        <div class="about-us">
+        <div class="container">
           <br />
           <br />
           <i class="what-we-have__title"
@@ -375,27 +370,28 @@
             <a href="./src/lab.html">Докладніше...</a>
           </div>
         </div>
+        </div>
 
         <!-- slider -->
         <div class="slider">
           <div class="item">
             <img
               src="./src/images/photos/photo5226469694922403931.jpg"
-              alt="Первый слайд"
+              alt="Перший слайд"
             />
           </div>
 
           <div class="item">
             <img
               src="./src/images/photos/photo5303084412470145765.jpg"
-              alt="Второй слайд"
+              alt="Другий слайд"
             />
           </div>
 
           <div class="item">
             <img
               src="./src/images/photos/photo5303084412470145779.jpg"
-              alt="Третий слайд"
+              alt="Третій слайд"
             />
           </div>
 

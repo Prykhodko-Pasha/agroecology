@@ -1,49 +1,45 @@
-.nakaz {
+@media screen and (min-width: 768px) {
+  .about__content,
+  .atestat__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about__text {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .about__text--side {
+    width: 40%;
+    padding: 40px 0;
+  }
+}
+
+.logo__bg {
+  margin: 20px auto 10px;
+  width: 95%;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.nakaz__link {
   text-decoration: underline;
 }
 
 .what-we-have__title {
-  // margin-top: 50px;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.4;
-  // letter-spacing: 3px;
-  // text-transform: uppercase;
   color: var(--light-green-color);
 }
 
-// .what-we-have__list .what-we-have__item {
-//   margin: 0;
-// }
-
-// .what-we-have__item:nth-child(odd) {
-//   background: linear-gradient(to right, #fff, rgba(161, 195, 35, 0.3));
-// }
-// .what-we-have__item:nth-child(even) {
-//   background: linear-gradient(to left, #fff, rgba(161, 195, 35, 0.3));
-// }
-
-// .what-we-have__item {
-//   padding: 20px 0;
-//   display: flex;
-
-//   & p {
-//     margin: 0 30px;
-//     width: 50%;
-//   }
-
-//   & .container {
-//     display: flex;
-//     align-items: center;
-//   }
-// }
-
-// .what-we-have__item p::before {
-//   content: "\2713";
-//   margin-right: 5px;
-// }
 .research__item {
-  // margin-left: 36px;
   padding: 20px 0 20px 36px;
 
   &::before {
@@ -67,28 +63,15 @@
 .info {
   font-size: 16px;
   padding: 15px;
-  // position: relative;
-  // width: 100%;
-  // height: 100%;
   z-index: 2;
   color: #fff;
-  // display: block;
-  // margin: auto 0;
   text-align: center;
-  // align-items: center;
-  // &::before {
-  //   content: "\2713";
-  //   margin-right: 5px;
-  //   width: 20%;
-  // }
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  // display: block;
-  // background-size: contain;
   top: 0;
   left: 0;
   position: absolute;
@@ -97,15 +80,10 @@
 
 .bg-img {
   position: absolute;
-
-  //width: 100%;
-  //height: auto;
   top: 0;
   min-width: 100%;
   min-height: 100%;
-
-  height: 100px; /*Set any dimensions you like*/
-  // width: 50px;
+  height: 100px;
   & img {
     height: 100%;
     width: 100%;
@@ -113,19 +91,13 @@
   }
 }
 
-.about__text {
-  line-height: 1.8;
-  font-size: 16px;
-  // text-align: justify;
-}
-
 .about__text__item {
   margin-left: 30px;
 }
 
-.atestat__content {
-  margin-top: 350px;
-}
+// .atestat__content {
+//   margin-top: 350px;
+// }
 @media screen and (min-width: 768px) {
   .atestat__content {
     display: flex;
@@ -134,7 +106,6 @@
 }
 
 .atestat {
-  // width: 40%;
   box-shadow: 0px 0px 5px 1px var(--light-green-color);
   border-radius: 5px;
   cursor: zoom-in;
@@ -156,23 +127,14 @@
   }
 }
 
-.logo__bg {
-  position: absolute;
-  top: 520px;
-  z-index: -1;
-  width: 95%;
-}
-
 .about-us {
   background-color: rgb(250, 255, 238);
-  // margin-top: 25px;
   padding-top: 50px;
 }
 
 .details {
   text-align: center;
   padding: 4px 0 100px;
-  // margin-bottom: 20px;
 }
 .details a {
   font-size: 18px;
