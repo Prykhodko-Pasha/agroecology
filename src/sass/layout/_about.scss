@@ -28,6 +28,38 @@
   }
 }
 
+// .atestat__content {
+//   margin-top: 350px;
+// }
+@media screen and (min-width: 768px) {
+  .atestat__content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.atestat {
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 5px;
+  cursor: zoom-in;
+  margin: 20px 0 40px;
+
+  transition: transform var(--animation);
+
+  // &-clicked {
+  //   transform: scale(2);
+  //   cursor: zoom-out;
+  // }
+
+  @media screen and (min-width: 768px) {
+    width: 40%;
+    margin: 0 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200%;
+  }
+}
 .nakaz__link {
   text-decoration: underline;
 }
@@ -93,38 +125,6 @@
 
 .about__text__item {
   margin-left: 30px;
-}
-
-// .atestat__content {
-//   margin-top: 350px;
-// }
-@media screen and (min-width: 768px) {
-  .atestat__content {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.atestat {
-  box-shadow: 0px 0px 5px 1px var(--light-green-color);
-  border-radius: 5px;
-  cursor: zoom-in;
-
-  transition: transform var(--animation);
-
-  &-clicked {
-    transform: scale(2);
-    cursor: zoom-out;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 40%;
-    margin: 0 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 200%;
-  }
 }
 
 .about-us {
