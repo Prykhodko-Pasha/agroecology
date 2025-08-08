@@ -1,0 +1,145 @@
+.accreditation {
+  margin-top: 30px;
+  margin-left: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.accreditation__text {
+  font-weight: 700;
+}
+
+.accreditation__item {
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.substance {
+  padding-top: 60px;
+}
+
+.substance__text {
+  color: #fff;
+  line-height: 3;
+  width: 100%;
+  text-transform: uppercase;
+
+  background: linear-gradient(to right, #466900, #fff);
+  border-radius: 5px;
+
+  &::before {
+    content: "❯";
+    color: #fff;
+    margin: 0 20px;
+  }
+}
+
+.substance__list {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  //   display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  .substance__list {
+    font-size: 18px;
+  }
+}
+
+.substance__item {
+  position: relative;
+  padding: 5px 10px;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+
+  // transition: all var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(161, 195, 35, 0.5);
+    // background: linear-gradient(to right, #fff, #a1c323);
+    border-radius: 5px;
+  }
+
+  & p {
+    max-width: 50%;
+  }
+
+  &::after {
+    content: url(../images/arrow-down.svg);
+    // font-size: 40px;
+    display: flex;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-right: 30px;
+    align-items: center;
+    // transform: rotate(90deg);
+    transition: all var(--animation);
+  }
+}
+
+.substance__item.is-open {
+  background-color: rgba(161, 195, 35, 0.5);
+  border-radius: 5px 5px 0 0;
+}
+
+.substance__item__desc {
+  // height: 0;
+  // opacity: 0;
+  display: none;
+  // display: flex;
+  // position: absolute;
+  // transform: translateY(-100%);
+  // pointer-events: none;
+  padding: 5px 0 5px 0;
+  background: linear-gradient(to left, #fff, rgba(161, 195, 35, 0.3));
+  border-radius: 0 0 5px 5px;
+  // margin-bottom: 4px;
+
+  // transition: all var(--animation);
+
+  & p {
+    // display: flex;
+    padding: 0 10px 0 20px;
+    width: 60%;
+  }
+}
+
+// ======== animation ===========
+.substance__item.is-open + .substance__item__desc {
+  // height: 100%;
+  // opacity: 1;
+  display: flex;
+  // position: static;
+  // transform: translateY(0);
+}
+
+.substance__item.is-open::after {
+  transform: rotateX(180deg);
+}
+
+.substance__sub-item {
+  max-width: 40%;
+  display: block;
+  padding: 5px 0 5px 20px;
+  border-left: 2px solid var(--light-green-color);
+}
+
+.accreditation-logo {
+  display: flex;
+  // justify-content: flex-end;
+  margin-bottom: 10px;
+
+  & img {
+    // width: 40px;
+    margin-right: 10px;
+    border-radius: 9px;
+  }
+}
