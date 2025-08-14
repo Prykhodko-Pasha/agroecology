@@ -22,15 +22,15 @@
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &-bg-index {
-      background-image: url("../images/Depositphotos_365887680_xl-2015.jpg");
+      background-image: url("/images/Depositphotos_365887680_xl-2015.jpg");
     }
 
     &-bg-lab {
-      background-image: url("../images/test-2.jpg");
+      background-image: url("/images/test-2.jpg");
     }
 
     &-bg-contacts {
-      background-image: url("../images/test-4.jpg");
+      background-image: url("/images/test-4.jpg");
     }
 
     &-is-scrolled {

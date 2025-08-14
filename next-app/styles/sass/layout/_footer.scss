@@ -68,3 +68,41 @@
   font-style: normal;
   text-align: end;
 }
+
+.footer__contacts__address {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.footer__contacts__link {
+  transition: color var(--animation);
+  
+  &:hover,
+  &:focus {
+    color: var(--light-green-color);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer__menu {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer__text {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer__contacts {
+    margin-left: 0;
+    text-align: center;
+  }
+}

@@ -15,6 +15,7 @@
 .about__text {
   line-height: 1.8;
   font-size: 16px;
+  color: var(--main-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -68,6 +69,14 @@
 }
 .nakaz__link {
   text-decoration: underline;
+  color: var(--medium-green-color);
+  font-weight: 600;
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--light-green-color);
+  }
 }
 
 .what-we-have__title {
@@ -80,18 +89,33 @@
 .research__item {
   padding: 20px 0 20px 36px;
   position: relative;
+  margin-bottom: 20px;
+  background-color: rgba(161, 195, 35, 0.05);
+  border-radius: 8px;
+  padding: 20px 20px 20px 60px;
+  border-left: 4px solid var(--light-green-color);
 
   @media screen and (min-width: 768px) {
-    padding: 20px 0 20px 60px;
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 25px;
   }
 
   &::before {
     content: "";
-    background-image: url(../images/lab.svg);
+    background-image: url(/images/lab.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     padding: 15px 14px;
     position: absolute;
-    left: 0;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    background-color: rgba(161, 195, 35, 0.1);
+    transform: translateX(5px);
+    transition: all var(--animation);
   }
 }
 
@@ -108,6 +132,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     width: 50%;
@@ -125,6 +150,9 @@
   z-index: 2;
   color: #fff;
   text-align: center;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  max-width: 80%;
 }
 
 .overlay {
@@ -135,6 +163,11 @@
   left: 0;
   position: absolute;
   z-index: 1;
+  transition: background-color var(--animation);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .bg-img {
@@ -142,37 +175,71 @@
   top: 0;
   min-width: 100%;
   min-height: 100%;
-  height: 100px;
+  height: 100%;
+  
   & img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: transform var(--animation);
   }
+}
+
+.what-we-have__item:hover .bg-img img {
+  transform: scale(1.05);
 }
 
 .about__text__item {
   margin-left: 30px;
+  padding: 10px 0;
+  position: relative;
+  
+  &::before {
+    content: "•";
+    color: var(--light-green-color);
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: -20px;
+    top: 8px;
+  }
 }
 
 .about-us {
   background-color: rgb(250, 255, 238);
   padding-top: 50px;
+  margin-top: 40px;
+}
+
+.about__text--side {
+  line-height: 1.8;
+  font-size: 16px;
+  color: var(--main-color);
 }
 
 .details {
   text-align: center;
   padding: 4px 0 100px;
 }
+
 .details a {
   font-size: 18px;
   padding: 16px 32px;
   display: inline-block;
-  transition-duration: 0.4s;
+  transition: all var(--animation);
   cursor: pointer;
-  border: 2px solid #4caf50;
+  border: 2px solid var(--light-green-color);
+  border-radius: 25px;
+  color: var(--light-green-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
-  &:hover {
-    background-color: #4caf50;
+  &:hover,
+  &:focus {
+    background-color: var(--light-green-color);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(161, 195, 35, 0.3);
   }
 }
