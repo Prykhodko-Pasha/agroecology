@@ -1,0 +1,9 @@
+$c-main: #212121;
+$c-green-100: #a1c323; /* light */
+$c-green-300: #466900; /* medium */
+$c-green-500: #2e4500; /* dark */
+
+/* motion */
+$dur: 250ms;
+$ease: cubic-bezier(0.4, 0, 0.2, 1);
+$anim: $dur $ease;

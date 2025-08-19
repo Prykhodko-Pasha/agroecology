@@ -1,3 +1,5 @@
+@use '../../variables' as *;
+
 .header {
   height: 60px;
   background-color: rgb(255, 255, 255);
@@ -6,12 +8,15 @@
   z-index: 3;
   width: 100%;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-}
+  // align-items: center;
+  overflow: hidden;  
+  transition: height $anim;
 
-@media screen and (min-width: 768px) {
-  .header {
+  &:has(.mob-menu.is-open) {
+    height: 100vh;
+  }
+
+  @media screen and (min-width: 768px) {
     height: 150px;
 
     background-size: contain;
@@ -62,7 +67,7 @@ nav {
     text-transform: uppercase;
     height: 100%;
 
-    transition: all var(--animation);
+    transition: all $anim;
 
     &-is-scrolled {
       font-size: 14px;
@@ -80,7 +85,7 @@ nav {
     // padding-bottom: 12px;
     position: relative;
 
-    transition: all var(--animation);
+    transition: all $anim;
 
     &:hover,
     &:focus {
@@ -88,35 +93,6 @@ nav {
       background-color: var(--medium-green-color);
       // color: var(--light-green-color);
     }
-
-    // &::after {
-    //   content: "";
-    //   width: 0;
-    //   height: 2px;
-    //   background-color: var(--light-green-color);
-    //   position: absolute;
-    //   bottom: 20px;
-    //   left: 0;
-
-    //   transition: width var(--animation);
-    // }
-
-    // &:hover::after,
-    // &:focus::after {
-    //   width: 100%;
-    // }
-
-    // &::before {
-    //   content: url(./../images/arrow-right.svg);
-    //   margin: 0 10px 0 0;
-    //   transition: all var(--animation);
-    // }
-
-    // &:hover::before,
-    // &:focus::before {
-    //   margin: 0 5px 0 5px;
-    //   content: url(./../images/arrow-right-2.svg);
-    // }
   }
 
   .menu__item--active,
@@ -158,19 +134,16 @@ nav {
 }
 
 .logo {
-  height: 58px;
   width: 150px;
-  // padding-top: 10px;
-  // margin-right: 10px;
-  // margin-left: auto;
-  position: fixed;
+  height: 150px;
+  position: absolute;
   top: 2px;
   right: 0;
   z-index: 2;
   overflow: hidden;
   // border-bottom: 50px solid rgb(255, 255, 255);
   // transition-delay: 0.2s;
-  transition: all var(--animation);
+  // transition: all $anim;
 
   &::before {
     content: "";
@@ -182,10 +155,6 @@ nav {
     animation: blick 5s infinite;
   }
 
-  .mob-menu.is-open + & {
-    // position: fixed;
-    height: 150px;
-  }
 
   .mob-menu.is-open + &::after {
     content: linear-gradient(to top, white, transparent);
@@ -222,72 +191,6 @@ nav {
 }
 //====================================================
 
-//====================== BURGER ======================
-.burger {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left: 5px;
-  // padding: 10px 15px 10px 15px;
-  border: none;
-  background-color: transparent;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-}
-
-.burger__icon {
-  display: flex;
-  background-color: var(--light-green-color);
-  width: 30px;
-  height: 3px;
-  border-radius: 4px;
-
-  transition: all var(--animation);
-}
-
-.burger__icon::before,
-.burger__icon::after {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  background-color: var(--light-green-color);
-  width: 30px;
-  height: 3px;
-  border-radius: 4px;
-
-  transition: all var(--animation);
-}
-
-.burger__icon::before {
-  transform: translateY(-10px);
-}
-
-.burger__icon::after {
-  transform: translateY(10px);
-}
-
-//==== Animation ====
-.burger.is-open .burger__icon {
-  background-color: transparent;
-}
-
-.burger.is-open .burger__icon::before {
-  transform: rotate(45deg);
-}
-
-.burger.is-open .burger__icon::after {
-  transform: rotate(-45deg);
-}
-//=====================
-
-@media screen and (min-width: 768px) {
-  .burger {
-    display: none;
-  }
-}
 
 //==== Mob Menu ====
 .mob-menu {
@@ -295,33 +198,23 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  // font-weight: 500;
-  // line-height: 1.18;
-  // letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
-  // justify-content: space-around;
 
-  position: fixed;
-  top: 59px;
+  position: absolute;
+  top: 60px;
   left: 0;
   z-index: 2;
   width: 100vw;
-  height: 0;
+  height: 100%;
   padding: 0 40px;
   background-color: #fff;
-  // transform: translateY(-120%);
   opacity: 0;
   pointer-events: none;
 
-  transition: all var(--animation);
+  // transition: all var(--animation);
 }
 
-// body:has(.is-open) {
-//   overflow: hidden;
-//   position: fixed;
-//   height: 100%;
-// }
 
 .mob-menu.is-open {
   // transform: translateY(0);

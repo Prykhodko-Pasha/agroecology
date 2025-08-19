@@ -1,0 +1,57 @@
+@use '../../variables' as *;
+
+.burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+       display: none;
+    }
+  }
+
+  .burger__icon {
+    display: flex;
+    width: 30px;
+    height: 3px;
+    border-radius: 4px;
+    background: $c-green-100;
+    transition: all $anim;
+  }
+
+  .burger__icon::before,
+  .burger__icon::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 30px;
+    height: 3px;
+    border-radius: 4px;
+    background: $c-green-100;
+    transition: all $anim;
+  }
+  .burger__icon::before {
+    transform: translateY(-10px);
+  }
+  .burger__icon::after {
+    transform: translateY(10px);
+  }
+
+  .burger.is-open .burger__icon {
+    background: transparent;
+  }
+  .burger.is-open .burger__icon::before {
+    transform: rotate(45deg);
+  }
+  .burger.is-open .burger__icon::after {
+    transform: rotate(-45deg);
+  }
+  

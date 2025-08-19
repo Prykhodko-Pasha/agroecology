@@ -2,9 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import BurgerButton from "../components/BurgerButton/BurgerButton";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mobMenuShowed, setmobMenuShowed] = useState(false);
 
   const slides = [
     {
@@ -36,6 +38,10 @@ export default function Home() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const toggleMenu = () => {
+    setmobMenuShowed(!mobMenuShowed);
+  };
+
   return (
     <>
       <Head>
@@ -43,13 +49,11 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
       </Head>
+
       <header className="header header-bg-index">
-        <button className="burger" type="button">
-          <div className="burger__icon"></div>
-        </button>
-        <div className="mob-menu">
+        <BurgerButton isOpen={mobMenuShowed} onClick={toggleMenu} />
+        <div className={mobMenuShowed ? "mob-menu is-open" : "mob-menu"}>
           <ul className="mob-menu__list">
             <li className="mob-menu__item">
               <Link className="mob-menu__link mob-menu__link--active" href="/">
