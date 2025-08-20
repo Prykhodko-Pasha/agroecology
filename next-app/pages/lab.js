@@ -1,7 +1,5 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import React from 'react';
-import styles from '../styles/sass/main.module.scss'; // Adjust if needed
+import Layout from '../components/Layout/Layout';
 import LabSection from '../components/LabSection';
 import LabSubstanceList from '../components/LabSubstanceList';
 
@@ -535,122 +533,47 @@ const registrationItems = [
 
 export default function Lab() {
   return (
-    <>
-      <Head>
-        <title>Випробувальна лабораторія "Відділ агроекології і біобезпеки"</title>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet" />
-      </Head>
-      <header className="header header-bg-lab">
-        <button className="burger" type="button">
-          <div className="burger__icon"></div>
-        </button>
-        <div className="mob-menu">
-          <ul className="mob-menu__list">
-            <li className="mob-menu__item">
-              <a className="mob-menu__link" href="/">Головна</a>
-            </li>
-            <li className="mob-menu__item">
-              <a className="mob-menu__link mob-menu__link--active" href="/lab">Випробувальна лабораторія</a>
-            </li>
-            <li className="mob-menu__item">
-              <a className="mob-menu__link" href="/contacts">Контакти</a>
-            </li>
-          </ul>
-        </div>
-        <a className="logo" href="/">
-          <img src="/images/logo-9-2.jpg" alt="Відділ агроекології і біобезпеки" />
-        </a>
-        <nav>
-          <ul className="menu">
-            <li>
-              <a className="menu__item" href="/">Головна</a>
-            </li>
-            <li>
-              <a className="menu__item menu__item--active" href="/lab">Випробувальна лабораторія</a>
-            </li>
-            <li>
-              <a className="menu__item" href="/contacts">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section className="lab section">
-          <div className="container">
-            <h1 className="section__title">Випробувальна лабораторія</h1>
-            <ol className="accreditation">
-              <p className="accreditation__text">Сфера акредитації:</p>
-              <li className="accreditation__item"><a href="#1">Ґрунт</a></li>
-              <li className="accreditation__item"><a href="#2">Біопрепарати</a></li>
-              <li className="accreditation__item"><a href="#3">Рослинницька продукція</a></li>
-              <li className="accreditation__item"><a href="#4">Вода</a></li>
-              <li className="accreditation__item"><a href="#5">Навколишнє середовище</a></li>
-            </ol>
-            <ul id="js-sub">
-              <LabSection id="1" title="ҐРУНТ">
-                <LabSubstanceList items={gruntItems} />
-                <ul className="gallery js-gallery"></ul>
-              </LabSection>
-              <LabSection id="2" title="БІОПРЕПАРАТИ">
-                <LabSubstanceList items={biopreparatyItems} />
-              </LabSection>
-              <LabSection id="7" title="Молекулярно-генетичні дослідження">
-                <LabSubstanceList items={molecularGenItems} />
-              </LabSection>
-              <LabSection id="3" title="РОСЛИННИЦЬКА ПРОДУКЦІЯ">
-                <LabSubstanceList items={plantItems} />
-              </LabSection>
-              <LabSection id="4" title="ВОДА">
-                <LabSubstanceList items={waterItems} />
-              </LabSection>
-              <LabSection id="5" title="НАВКОЛИШНЄ СЕРЕДОВИЩЕ">
-                <LabSubstanceList items={environmentItems} />
-              </LabSection>
-              <LabSection id="6" title="Державна реєстрація">
-                <LabSubstanceList items={registrationItems} />
-              </LabSection>
-              {/* ... repeat for all other sections ... */}
-            </ul>
-          </div>
-        </section>
-      </main>
-      <footer className="footer">
+    <Layout 
+      title="Випробувальна лабораторія 'Відділ агроекології і біобезпеки'"
+      currentPage="lab"
+    >
+      <section className="lab section">
         <div className="container">
-          <div>
-            <ul className="footer__menu">
-              <li className="footer__menu__item">
-                <a href="/">Головна</a>
-              </li>
-              <li className="footer__menu__item">|</li>
-              <li className="footer__menu__item">
-                <a href="/lab">Випробувальна лабораторія</a>
-              </li>
-              <li className="footer__menu__item">|</li>
-              <li className="footer__menu__item">
-                <a href="/contacts">Контакти</a>
-              </li>
-            </ul>
-            <p className="footer__text">ВЛ ВАБ</p>
-          </div>
-          <address className="footer__contacts">
-            <ul>
-              <li>
-                <p className="footer__contacts__address">м. Київ, вул. Метрологічна, 12</p>
-              </li>
-              <li>
-                <a className="footer__contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-              </li>
-              <li>
-                <a className="footer__contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
-              </li>
-            </ul>
-          </address>
+          <h1 className="section__title">Випробувальна лабораторія</h1>
+          <ol className="accreditation">
+            <p className="accreditation__text">Сфера акредитації:</p>
+            <li className="accreditation__item"><a href="#1">Ґрунт</a></li>
+            <li className="accreditation__item"><a href="#2">Біопрепарати</a></li>
+            <li className="accreditation__item"><a href="#3">Рослинницька продукція</a></li>
+            <li className="accreditation__item"><a href="#4">Вода</a></li>
+            <li className="accreditation__item"><a href="#5">Навколишнє середовище</a></li>
+          </ol>
+          <ul id="js-sub">
+            <LabSection id="1" title="ҐРУНТ">
+              <LabSubstanceList items={gruntItems} />
+              <ul className="gallery js-gallery"></ul>
+            </LabSection>
+            <LabSection id="2" title="БІОПРЕПАРАТИ">
+              <LabSubstanceList items={biopreparatyItems} />
+            </LabSection>
+            <LabSection id="7" title="Молекулярно-генетичні дослідження">
+              <LabSubstanceList items={molecularGenItems} />
+            </LabSection>
+            <LabSection id="3" title="РОСЛИННИЦЬКА ПРОДУКЦІЯ">
+              <LabSubstanceList items={plantItems} />
+            </LabSection>
+            <LabSection id="4" title="ВОДА">
+              <LabSubstanceList items={waterItems} />
+            </LabSection>
+            <LabSection id="5" title="НАВКОЛИШНЄ СЕРЕДОВИЩЕ">
+              <LabSubstanceList items={environmentItems} />
+            </LabSection>
+            <LabSection id="6" title="Державна реєстрація">
+              <LabSubstanceList items={registrationItems} />
+            </LabSection>
+          </ul>
         </div>
-      </footer>
-    </>
+      </section>
+    </Layout>
   );
 } 

@@ -67,3 +67,127 @@
   width: 100%;
   height: 90vh;
 }
+
+// New contacts page styles
+.contacts__wrapper {
+  margin-bottom: 3rem;
+}
+
+.contacts__list {
+  margin: 20px auto;
+  line-height: 2.5;
+  
+  li {
+    margin-bottom: 1rem;
+    
+    p {
+      color: var(--main-color);
+      margin: 0;
+    }
+  }
+}
+
+.contacts__item {
+  color: var(--dark-green-color);
+  text-decoration: none;
+  transition: color var(--animation);
+  
+  &:hover {
+    color: var(--light-green-color);
+  }
+}
+
+.contacts__schedule {
+  margin-left: 20px;
+  color: var(--main-color);
+}
+
+.team__wrapper {
+  margin-bottom: 3rem;
+}
+
+.team {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.team__item {
+  display: flex;
+  box-shadow: 0px 0px 5px 1px var(--light-green-color);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  transition: box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px 3px var(--light-green-color);
+  }
+
+  & img {
+    border-radius: 5px;
+  }
+}
+
+.team__text {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.team__place {
+  color: var(--medium-green-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.team__name {
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.team__contacts {
+  color: var(--light-green-color);
+  text-decoration: none;
+  margin: 0.25rem 0;
+  transition: color var(--animation);
+  
+  &:hover {
+    color: var(--medium-green-color);
+  }
+}
+
+.map {
+  width: 100%;
+  height: 90vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .team__item {
+    flex-direction: column;
+    text-align: center;
+    
+    img {
+      margin: 0 auto 1rem;
+    }
+  }
+  
+  .team__text {
+    padding: 1rem;
+  }
+  
+  .map {
+    height: 60vh;
+  }
+  
+  .contacts__list {
+    padding: 0 1rem;
+  }
+}
