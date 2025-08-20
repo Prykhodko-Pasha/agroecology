@@ -53,18 +53,9 @@
 
   transition: transform var(--animation);
 
-  // &-clicked {
-  //   transform: scale(2);
-  //   cursor: zoom-out;
-  // }
-
   @media screen and (min-width: 768px) {
-    width: 40%;
+    width: 50%;
     margin: 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 200%;
   }
 }
 .nakaz__link {

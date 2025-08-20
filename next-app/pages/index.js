@@ -3,10 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import BurgerButton from "../components/BurgerButton/BurgerButton";
+import Lightbox from "../components/Lightbox/Lightbox";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobMenuShowed, setmobMenuShowed] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState({ src: "", alt: "" });
 
   const slides = [
     {
@@ -40,6 +43,16 @@ export default function Home() {
 
   const toggleMenu = () => {
     setmobMenuShowed(!mobMenuShowed);
+  };
+
+  const openLightbox = (src, alt) => {
+    setLightboxImage({ src, alt });
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setLightboxImage({ src: "", alt: "" });
   };
 
   return (
@@ -138,6 +151,7 @@ export default function Home() {
                 alt="Атестат про акредитацію"
                 width={400}
                 height={300}
+                onClick={() => openLightbox("/images/atestat.jpg", "Атестат про акредитацію")}
               />
             </div>
             <p className="about__text">
@@ -390,6 +404,16 @@ export default function Home() {
           </address>
         </div>
       </footer>
+
+      {/* Lightbox */}
+      <Lightbox isOpen={lightboxOpen} onClose={closeLightbox}>
+        <Image
+          src={lightboxImage.src}
+          alt={lightboxImage.alt}
+          fill={true}
+          className="lightbox__image"
+        />
+      </Lightbox>
     </>
   );
 } 
