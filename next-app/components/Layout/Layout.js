@@ -19,6 +19,19 @@ export default function Layout({ children, title = "Відділ агроеко�
     return currentPage === page ? "mob-menu__link--active" : "";
   };
 
+  const getHeaderBgClass = () => {
+    switch (currentPage) {
+      case "home":
+        return "header-bg-index";
+      case "lab":
+        return "header-bg-lab";
+      case "contacts":
+        return "header-bg-contacts";
+      default:
+        return "header-bg-index";
+    }
+  };
+
   return (
     <>
       <Head>
@@ -28,7 +41,7 @@ export default function Layout({ children, title = "Відділ агроеко�
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <header className="header header-bg-index">
+      <header className={`header ${getHeaderBgClass()}`}>
         <BurgerButton isOpen={mobMenuShowed} onClick={toggleMenu} />
         <div className={mobMenuShowed ? "mob-menu is-open" : "mob-menu"}>
           <ul className="mob-menu__list">

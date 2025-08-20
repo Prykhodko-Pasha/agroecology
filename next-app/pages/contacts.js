@@ -192,7 +192,7 @@ export default function Contacts() {
 
         <div className="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.80086311895!2d30.473691715186295!3d50.35161950236305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c86fb95b87a9%3A0x257104767cf341a4!2z0LLRg9C70LjRhtGPINCc0LXRgtGA0L7Qu9C-0LPRltGH0L3QsCwgMTIsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1621680763352!5m2!1suk!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d636.4525928970456!2d30.476352491995268!3d50.35144216338408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c86fb95b87a9%3A0x358516b440edb4c9!2z0IbQvdGB0YLQuNGC0YPRgiDQsNCz0YDQvtC10LrQvtC70L7Qs9GW0Zcg0ZYg0L_RgNC40YDQvtC00L7QutC-0YDQuNGB0YLRg9Cy0LDQvdC90Y8g0J3QkNCQ0J0!5e0!3m2!1suk!2sua!4v1755709604141!5m2!1suk!2sua"
             width="100%"
             height="100%"
             style={{ border: 0 }}
