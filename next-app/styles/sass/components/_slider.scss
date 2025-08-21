@@ -1,162 +1,97 @@
-.slider {
-  //   max-width: 100%;
+// Swiper Slider Styles
+.swiper-container {
   position: relative;
-  margin: auto;
-  height: 500px;
-  margin-bottom: -40px;
-  // margin-top: 20px;
+  width: 100%;  
+  height: 300px;
+  margin-bottom: -20px;
 }
-/* Картинка мастабируется по отношению к родительскому элементу */
-.slider .item img {
-  object-fit: cover;
+
+.swiper-slider {
   width: 100%;
-  height: 500px;
-  border: none !important;
-  box-shadow: none !important;
-}
-/* Кнопки вперед и назад */
-.slider .prev,
-.slider .next {
-  cursor: pointer;
-  position: absolute;
-  top: 235px;
-  //   top: 50%;
-  width: auto;
-  // height: 100%;
-  //   margin-top: -22px;
-  padding: 15px 20px;
-  color: var(--light-green-color);
-  font-weight: bold;
-  font-size: 18px;
-  transform: scale(1);
-  //   background: transparent;
-  transition: all var(--animation);
-  //   border-radius: 0 3px 3px 0;
+  height: 100%;
 }
 
-// .slider .prev::after,
-// .slider .next::after {
-//   position: absolute;
-//   content: "";
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   transition: opacity var(--animation);
-//   opacity: 0;
-// }
-.slider .next {
-  right: 0;
-  //   border-radius: 3px 0 0 3px;
-}
-/* При наведении на кнопки добавляем фон кнопок */
-.slider .prev:hover,
-.slider .next:hover {
-  transform: scale(1.5);
+.slide-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none !important;
+    box-shadow: none !important;
+  }
 }
 
-// .slider .next::after {
-//   right: 0;
-//   background: linear-gradient(to right, transparent, rgba(161, 195, 35, 0.3));
-// }
-// .slider .prev::after {
-//   left: 0;
-//   background: linear-gradient(to left, transparent, rgba(161, 195, 35, 0.3));
-// }
-// .slider .next:hover::after,
-// .slider .prev:hover::after {
-//   opacity: 1;
-// }
-/* Заголовок слайда */
-// .slideText {
-//   position: absolute;
-//   color: #fff;
-//   font-size: 35px;
-//   /* Выравнивание текста по горизонтали и по вертикали*/
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   /* Тень*/
-//   text-shadow: 1px 1px 1px #000, 0 0 1em #000;
-// }
-/* Кружочки */
-// .slider-dots {
-//   text-align: center;
-// }
-// .slider-dots_item {
-//   cursor: pointer;
-//   height: 12px;
-//   width: 12px;
-//   margin: 0 2px;
-//   background-color: #ddd;
-//   border-radius: 50%;
-//   display: inline-block;
-//   transition: background-color 0.6s ease;
-// }
-// .active,
-// .slider-dots_item:hover {
-//   background-color: #aaa;
-// }
-/* Анимация слайдов */
-.slider .item {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s;
-  display: none;
-  position: relative;
-}
-
-.slider .item:first-child {
-  display: block;
-}
-
-/* Responsive slider */
-@media screen and (max-width: 767px) {
-  .slider {
-    height: 300px;
-    margin-bottom: -20px;
+// Swiper Navigation Buttons
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+  width: 50px !important;
+  height: 50px !important;
+  // background: rgba(161, 195, 35, 0.8) !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  
+  &::after {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: white !important;
   }
   
-  .slider .item img {
-    height: 300px;
+  &:hover {
+    background: rgba(161, 195, 35, 0.5) !important;
+    transform: scale(1.1) !important;
   }
   
-  .slider .prev,
-  .slider .next {
-    top: 135px;
-    padding: 10px 15px;
-    font-size: 16px;
+  &.swiper-button-disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
   }
+}
+
+// Pagination
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(161, 195, 35, 0.5) !important;
+  opacity: 0.7 !important;
+  
+  &-active {
+    background: var(--light-green-color) !important;
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {    
+    height: 500px;
+    margin-bottom: -40px;
+  }
+  
+  .swiper-pagination {
+    bottom: 20px !important;
+  }  
 }
 
 @media screen and (min-width: 1280px) {
-  .slider {
-    height: 600px;
+  .swiper-container {
+    height: 600px;    
   }
-  
-  .slider .item img {
-    height: 600px;
-  }
-  
-  .slider .prev,
-  .slider .next {
-    top: 285px;
-  }
-}
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+
+    &::after {
+      font-size: 24px !important;
+
+    }
   }
 }

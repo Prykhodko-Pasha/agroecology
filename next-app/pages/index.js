@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import Lightbox from "../components/Lightbox/Lightbox";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState({ src: "", alt: "" });
 
@@ -23,21 +29,6 @@ export default function Home() {
       alt: "Третій слайд"
     }
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   const openLightbox = (src, alt) => {
     setLightboxImage({ src, alt });
@@ -267,37 +258,39 @@ export default function Home() {
         </div>
         </div>
 
-        {/* Slider */}
-        <div className="slider">
-          <div className="item" style={{ display: currentSlide === 0 ? 'block' : 'none' }}>
-            <Image
-              src={slides[0].src}
-              alt={slides[0].alt}
-              width={800}
-              height={600}
-            />
-          </div>
-
-          <div className="item" style={{ display: currentSlide === 1 ? 'block' : 'none' }}>
-            <Image
-              src={slides[1].src}
-              alt={slides[1].alt}
-              width={800}
-              height={600}
-            />
-          </div>
-
-          <div className="item" style={{ display: currentSlide === 2 ? 'block' : 'none' }}>
-            <Image
-              src={slides[2].src}
-              alt={slides[2].alt}
-              width={800}
-              height={600}
-            />
-          </div>
-
-          <button className="prev" onClick={prevSlide}>&#10094;</button>
-          <button className="next" onClick={nextSlide}>&#10095;</button>
+        {/* Swiper Slider */}
+        <div className="swiper-container">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={0}
+            slidesPerView={1}
+            navigation={true}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            speed={800}
+            className="swiper-slider"
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <div className="slide-item">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    width={800}
+                    height={600}
+                    priority={index === 0}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
 

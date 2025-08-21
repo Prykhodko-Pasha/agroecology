@@ -1,16 +1,16 @@
-@import "./utils/variables";
+@forward "./utils/variables";
 
-@import "./base/common";
-@import "./base/container";
+@forward "./base/common";
+@forward "./base/container";
 
-@import "./components/section";
-@import "./components/lightbox";
-@import "./components/gallery";
-@import "./components/slider";
-@import "./components/BurgerButton";
+@forward "./components/section";
+@forward "./components/lightbox";
+@forward "./components/gallery";
+@forward "./components/slider";
+@forward "./components/burgerButton";
 
-@import "./layout/header";
-@import "./layout/about";
-@import "./layout/lab";
-@import "./layout/contacts";
-@import "./layout/footer";
+@forward "./layout/header";
+@forward "./layout/about";
+@forward "./layout/lab";
+@forward "./layout/contacts";
+@forward "./layout/footer";
