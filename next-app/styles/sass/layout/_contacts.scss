@@ -12,25 +12,25 @@
     margin-bottom: 1rem;
     
     p {
-      color: var(--main-color);
+      color: $c-main;
       margin: 0;
     }
   }
 }
 
 .contacts__item {
-  color: var(--dark-green-color);
+  color: $c-green-500;
   text-decoration: none;
-  transition: color var(--animation);
+  transition: color $anim;
   
   &:hover {
-    color: var(--light-green-color);
+    color: $c-green-100;
   }
 }
 
 .contacts__schedule {
   margin-left: 20px;
-  color: var(--main-color);
+  color: $c-main;
 }
 
 .team__wrapper {
@@ -75,7 +75,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--light-green-color), var(--medium-green-color));
+    background: linear-gradient(90deg, $c-green-100, $c-green-300);
     opacity: 0;
     z-index: 1;
     transition: opacity $anim;
@@ -111,7 +111,7 @@
 }
 
 .team__place {
-  color: var(--medium-green-color);
+  color: $c-green-300;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -135,7 +135,7 @@
   text-align: center;
   
   &:hover {
-    color: var(--medium-green-color);
+    color: $c-green-300;
     background: rgba(161, 195, 35, 0.1);
     border-color: rgba(161, 195, 35, 0.2);
     transform: translateY(-2px);

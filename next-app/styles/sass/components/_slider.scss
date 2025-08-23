@@ -1,4 +1,5 @@
-// Swiper Slider Styles
+@use '../../variables' as *;
+
 .swiper-container {
   position: relative;
   width: 100%;  
@@ -64,7 +65,7 @@
   opacity: 0.7 !important;
   
   &-active {
-    background: var(--light-green-color) !important;
+    background: $c-green-100 !important;
     opacity: 1 !important;
   }
 }

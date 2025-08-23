@@ -101,7 +101,7 @@
   
   h2 {
     margin-top: 0;
-    color: var(--main-color);
+    color: $c-main;
   }
   
   .actions {
@@ -122,7 +122,7 @@
   
   h2 {
     margin-top: 0;
-    color: var(--main-color);
+    color: $c-main;
   }
   
   .form-group {
@@ -132,7 +132,7 @@
       display: block;
       margin-bottom: 0.5rem;
       font-weight: bold;
-      color: var(--main-color);
+      color: $c-main;
     }
     
     input, textarea {
@@ -207,11 +207,11 @@
   transition: background-color 0.3s ease;
   
   &.btn-primary {
-    background: var(--light-green-color);
+    background: $c-green-100;
     color: white;
     
     &:hover {
-      background: var(--medium-green-color);
+      background: $c-green-300;
     }
   }
   

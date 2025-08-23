@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import Lightbox from "../components/Lightbox/Lightbox";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,21 +14,34 @@ import 'swiper/css/pagination';
 export default function Home() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState({ src: "", alt: "" });
+  const [slides, setSlides] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const slides = [
-    {
-      src: "/images/photos/photo5226469694922403931.jpg",
-      alt: "Перший слайд"
-    },
-    {
-      src: "/images/photos/photo5303084412470145765.jpg", 
-      alt: "Другий слайд"
-    },
-    {
-      src: "/images/photos/photo5303084412470145779.jpg",
-      alt: "Третій слайд"
-    }
-  ];
+  useEffect(() => {
+    const fetchSlides = async () => {
+      try {
+        const response = await fetch('http://localhost:1337/api/sliders?populate=*');
+        if (!response.ok) {
+          throw new Error('Failed to fetch slides');
+        }
+        const data = await response.json();
+        
+        // Transform Strapi data to match the expected format
+        const transformedSlides = data.data?.[0].Photos.map(item => ({
+          src: `http://localhost:1337${item.url}`,
+          alt: item.alternativeText || 'Slide',
+        }));
+        
+        setSlides(transformedSlides);
+      } catch (error) {
+        console.error('Error fetching slides:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSlides();
+  }, []);
 
   const openLightbox = (src, alt) => {
     setLightboxImage({ src, alt });
@@ -259,39 +272,41 @@ export default function Home() {
         </div>
 
         {/* Swiper Slider */}
-        <div className="swiper-container">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            navigation={true}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            speed={800}
-            className="swiper-slider"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="slide-item">
-                  <Image
-                    src={slide.src}
-                    alt={slide.alt}
-                    width={800}
-                    height={600}
-                    priority={index === 0}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {!loading && slides.length > 0 && (
+          <div className="swiper-container">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation={true}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              speed={800}
+              className="swiper-slider"
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index}>
+                  <div className="slide-item">
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      width={800}
+                      height={600}
+                      priority={index === 0}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
       </section>
 
       {/* Lightbox */}

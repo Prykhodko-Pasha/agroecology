@@ -80,7 +80,7 @@ nav {
   }
 
   .menu__item {
-    color: var(--main-color);
+    color: $c-main;
     padding: 12px;
     // padding-bottom: 12px;
     position: relative;
@@ -90,15 +90,15 @@ nav {
     &:hover,
     &:focus {
       color: #fff;
-      background-color: var(--medium-green-color);
-      // color: var(--light-green-color);
+      background-color: $c-green-300;
+      // color: $c-green-100;
     }
   }
 
   .menu__item--active,
   .menu__item--active:hover,
   .menu__item--active:focus-visible {
-    color: var(--light-green-color);
+    color: $c-green-100;
   }
 }
 
@@ -212,7 +212,7 @@ nav {
   opacity: 0;
   pointer-events: none;
 
-  // transition: all var(--animation);
+  // transition: all $anim;
 }
 
 
@@ -249,18 +249,18 @@ nav {
 
 // .mob-menu__link {
 //   font-size: 40px;
-//   // color: var(--main-color);
+//   // color: $c-main;
 
-//   transition: color var(--animation);
+//   transition: color $anim;
 
 //   // &:hover,
 //   // &:focus {
-//   //   color: var(--light-green-color);
+//   //   color: $c-green-100;
 //   // }
 // }
 
 .mob-menu__link--active {
-  color: var(--light-green-color);
+  color: $c-green-100;
 }
 
 // .mob-menu__contacts {
@@ -273,13 +273,13 @@ nav {
 
 .mob-menu__tel {
   font-size: 30px;
-  color: var(--medium-green-color);
+  color: $c-green-300;
   margin-bottom: 32px;
 }
 
 .mob-menu__mail {
   font-size: 30px;
-  color: var(--medium-green-color);
+  color: $c-green-300;
   text-transform: none;
   // &:hover,
   // &:focus {
